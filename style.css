@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(53, 52, 63);
+}
+header{
+    background: white;
+    padding: 20px;
+}
+header>h1{
+    color: rgb(35, 43, 43);
+    text-align: center;
+    font-family:Asap,sans-serif;
+}
+.score-board{
+    margin: 20px auto;
+    border: 3px white solid;
+    border-radius: 4px;
+    text-align: center;
+    width: 300px;
+    color: white;
+    font-size: 50px;
+    padding:45xp 30px ;
+    font-family: Asap,sans-serif;
+    position: relative;
+}
+
+
+.badge{
+    background-color: rgb(209, 81, 81);
+    color: white;
+    font-size: 14px;
+    padding: 2px 10px;
+    font-family: Asap,sans-serif;
+}
+#user-label{
+    position: absolute;
+    top: 20px;
+    left: -20px;
+}
+
+#comp-label{
+    position: absolute;
+    top: 20px;
+    right: -20px;
+}
+
+.result{
+    font-size: 40px;
+    color: white;
+    
+
+}
+
+.result>p{
+    text-align: center;
+    font-family: Asap,sans-serif;
+    font-weight: bold;
+    
+}
+.choices{
+    margin: 50px 0;
+    text-align: center; 
+}
+
+.choice{
+    height: 120px;
+    width: 120px;
+    color: honeydew;
+    background-color: rgb(10, 10, 10);
+    /* padding: 30px 0; */
+    border: 4px white solid;   
+    border-radius: 50%;
+    margin: 0 20px;
+    display: inline-block;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    
+}
+
+
+.choice>p{
+    font-family: Asap,sans-serif;
+    text-align: center;
+    position: relative;
+}
+.choice img{
+    
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit:fill;
+    
+    
+}
+
+.choice:hover{
+    height: 110px;
+    width: 110px;
+    cursor: pointer;
+    
+}
+#action-message{
+    color: white;
+    font-weight: bold;
+    font-family: Asap,sans-serif;
+    text-align: center;
+    font-size: 30px;
+}
+
+.greenglow{
+    border: 4px green solid;
+    box-shadow: 0 0 10px gray;
+}
+.redglow{
+    border: 4px red solid;
+    box-shadow: 0 0 10px gray;
+}
+.yellowglow{
+    border: 4px yellow solid;
+    box-shadow: 0 0 10px yellow;
+}
