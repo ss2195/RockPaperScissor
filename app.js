@@ -25,11 +25,11 @@ function win(userChoice, compChoice){
     USER_SCORE_SPAN.innerHTML = USER_SCORE;
     const smallUserWord  = "USER".fontsize(3).sub()
     const smallCompWord  = "COMPUTER".fontsize(3).sub()
+    const userChoice_div = document.getElementById(userChoice)
     RESULT_DIV.innerHTML = `${convertToWord(userChoice)}${smallUserWord} beats ${convertToWord(compChoice)}${smallCompWord} You Win!!`;
-    document.getElementById(userChoice).classList.add("greenglow");
-    setTimeout(function(){
-        document.getElementById(userChoice).classList.remove("greenglow");
-    },300);
+    userChoice_div.classList.add("greenglow");
+    setTimeout(()=>
+        userChoice_div.classList.remove("greenglow"),300);
 
 }
 function lose(userChoice, compChoice){
@@ -37,19 +37,17 @@ function lose(userChoice, compChoice){
     COMP_SCORE_SPAN.innerHTML = COMP_SCORE;
     const smallUserWord  = "USER".fontsize(3).sub()
     const smallCompWord  = "COMPUTER".fontsize(3).sub()
+    const userChoice_div = document.getElementById(userChoice)
     RESULT_DIV.innerHTML = `${convertToWord(userChoice)}${smallUserWord} loses to ${convertToWord(compChoice)}${smallCompWord}. You Lose!!`;
-    document.getElementById(userChoice).classList.add("redglow");
-    setTimeout(function(){
-        document.getElementById(userChoice).classList.remove("redglow");
-    },300);
+    userChoice_div.classList.add("redglow");
+    setTimeout(()=>userChoice_div.classList.remove("redglow"),300);
 
 }
 function draw(userChoice, compChoice){
     RESULT_DIV.innerHTML = `It is a Draw`;
-    document.getElementById(userChoice).classList.add("yellowglow");
-    setTimeout(function(){
-        document.getElementById(userChoice).classList.remove("yellowglow");
-    },300);
+    const userChoice_div = document.getElementById(userChoice)
+    userChoice_div.classList.add("yellowglow");
+    setTimeout(()=>userChoice_div.classList.remove("yellowglow"),300);
 }
 
 function getComputerChoice(){
@@ -89,18 +87,11 @@ function game(userChoice){
 }
 
 function main(){
-    ROCK_DIV.addEventListener('click',function(){
-        console.log("Clicked on Rock");
-        game("r")
-    })
-    PAPER_DIV.addEventListener('click',function(){
-        console.log("Clicked on Paper");
-        game("p")
-    })
-    SCISSOR_DIV.addEventListener('click',function(){
-        console.log("Clicked on Scissor");
-        game("s")
-    })
+    ROCK_DIV.addEventListener('click',()=>game("r"))
+
+    PAPER_DIV.addEventListener('click',()=>game("p"))
+
+    SCISSOR_DIV.addEventListener('click',()=>game("s"))
 
 }
 
